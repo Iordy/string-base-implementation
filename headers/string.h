@@ -2,6 +2,7 @@
 #define STRING
 
 
+namespace custom_string{
 
 class string 
 {
@@ -25,9 +26,9 @@ class string
 
 };
 
-
-
 }
+
+
 
 
 
