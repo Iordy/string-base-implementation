@@ -18,6 +18,7 @@ Include the string class in your C++ code as follows:
 custom_string::string myString;
 std::cin >> myString;
 std::cout << "The length of the string is: " << myString.get_len() << std::endl;
+```
 
 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
