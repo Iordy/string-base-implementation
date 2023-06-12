@@ -20,9 +20,9 @@ std::cin >> myString;
 std::cout << "The length of the string is: " << myString.get_len() << std::endl;
 ```
 
-Contributing
+<h3>Contributing</h3>
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-License
+<h3>License</h3>
 This project is licensed under the MIT License.
