@@ -11,16 +11,23 @@ class string
 
     public:
 
-    string(){
-        
-    }
+   string();
+   string(char letters[]);
+   string(const string &source);
+   string& operator = (const string &source);
+   ~string();
+
+  friend std::istream& operator>>(std::istream& in, string &source);
+  friend std::ostream& operator<<(std::ostream& out, string &source);
+
+  int get_len(){return this-> string_length;}
+
 
 };
 
 
-void test();
 
-
+}
 
 
 
