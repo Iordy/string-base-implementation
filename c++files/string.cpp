@@ -2,7 +2,8 @@
 
 #include "/Users/andreiiordache/Documents/GitHub/string-base-implementation/headers/string.h"
 
-using namespace std;
+
+using namespace custom_string;
 
 
     custom_string::string::string()
@@ -46,5 +47,37 @@ using namespace std;
             delete[] this->string_letters;
         this->string_length = 0;
    }
+
+
+   string string::operator +(const string &source)
+   {
+        string temp("");
+        strcat(temp.string_letters, source.string_letters);
+        strcat(temp.string_letters, source.string_letters);
+
+        return temp;
+   }
+
+   bool string::operator ==(const string &source)
+   {
+        if(strcmp(this->string_letters, source.string_letters) != 0 )
+        return false;
+        return true;
+   }
+
+   bool string::operator !=(const string &source)
+   {
+        if(strcmp(this->string_letters, source.string_letters) != 0 )
+        return true;
+        return false;
+   }
+
+
+
+
+
+
+
+
 
 

@@ -14,7 +14,13 @@ return in;
 std::ostream& operator<<(std::ostream& out, string &source)
 {
 
-out<<*(source.string_letters);
+
+for(int i = 0; i < source.string_length; i++)
+{
+    out<<(source.string_letters[i]);
+}
+
+
 return out;
 
 }

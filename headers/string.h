@@ -19,10 +19,17 @@ class string
    string& operator = (const string &source);
    ~string();
 
+  string operator +(const string &source);
+  bool operator ==(const string &source);
+  bool operator !=(const string &source);
+
   friend std::istream& operator>>(std::istream& in, string &source);
   friend std::ostream& operator<<(std::ostream& out, string &source);
 
   int get_len(){return this-> string_length;}
+  int length(){return this->string_length;}
+
+
 
 
 };
