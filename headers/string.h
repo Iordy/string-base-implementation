@@ -1,6 +1,7 @@
 #ifndef STRING
 #define STRING
 
+#include <iostream>
 
 namespace custom_string{
 
