@@ -14,6 +14,8 @@ int main()
     custom_string::string test("andrei");
 
     cin>>test;
+
+
     cout<<test<<"test";
 
 

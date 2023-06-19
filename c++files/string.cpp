@@ -73,6 +73,15 @@ using namespace custom_string;
    }
 
 
+ /* string string::operator +=(const string &source)
+   {
+        strcat(this->string_letters, source.string_letters);
+        return *this;
+   }
+
+*/
+
+
 
 
 
