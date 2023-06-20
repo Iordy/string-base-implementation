@@ -6,13 +6,13 @@
 using namespace custom_string;
 
 
-    custom_string::string::string()
+   string::string()
    {
         this-> string_length = 1;
         *(this->string_letters) = 'a' + rand() % 26;
    }
 
-   custom_string::string::string(char letters[])
+   string::string(char letters[])
    {
         int n = strlen(letters);
         this-> string_letters = new char[n];
@@ -20,7 +20,7 @@ using namespace custom_string;
         this-> string_length = n;
    }
 
-   custom_string::string::string(const string &source)
+   string::string(const string &source)
    {
         delete[] this->string_letters;
         this->string_length = source.string_length;
@@ -28,7 +28,20 @@ using namespace custom_string;
         strcpy(this->string_letters, source.string_letters);
    }
 
-   custom_string::string& custom_string::string::operator = (const string &source)
+   string::string(char* begin, char* end)
+   {
+        this-> string_letters = new char[end - begin];
+        this-> string_length = end - begin; 
+
+        for(int i = 0; i < this->string_length; i++)
+        {
+            this->string_letters[i] = begin[i];
+        }
+   }
+
+     
+
+   string& string::operator = (const string &source)
    {
         if(this != &source)
         {
@@ -41,7 +54,7 @@ using namespace custom_string;
 
    }
 
-   custom_string::string::~string()
+   string::~string()
    {
         if(this-> string_letters != NULL)
             delete[] this->string_letters;
@@ -73,13 +86,13 @@ using namespace custom_string;
    }
 
 
- /* string string::operator +=(const string &source)
+   string& string::operator +=(const string &source)
    {
         strcat(this->string_letters, source.string_letters);
         return *this;
    }
 
-*/
+
 
 
 

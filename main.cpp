@@ -15,10 +15,11 @@ int main()
 
     cin>>test;
 
+    custom_string::string test2(test.begin(), test.begin() + 3);
 
-    cout<<test<<"test";
+    cout<<test2<<endl;
 
-
+    cout<<endl<<test2.length()<<endl;
 
 
     
