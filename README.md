@@ -29,7 +29,7 @@ This project is a basic implementation of a string class in C++, with a focus on
   void insert(int index, const string &source);
   void pop_back();
   ```
--Operator overloads
+- Operator overloads
 ```cpp
   string& operator = (const string &source);
   string& operator +(const string &source);
