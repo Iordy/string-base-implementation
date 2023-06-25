@@ -165,32 +165,22 @@ using namespace custom_string;
           strncpy(this-> string_letters, this->string_letters, this->string_length - 1);
    }
 
-   
+   void string::replace(int index, const string &source)
+   {
+          string* temp = new string(this->begin(), this->begin()+index); 
+          strcat(temp->string_letters, source.string_letters);
+
+          this-> string_length = temp->length();
+          this-> string_letters = temp->string_letters;
+   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  void string::insert(int index, const string &source)
+  {
+          string* temp = new string(this->begin(), this->begin()+index); 
+          strcat(temp->string_letters, source.string_letters);
+          strcat(temp->string_letters,this->begin()+index);
+     
+          this-> string_length = temp->length();
+          this-> string_letters = temp->string_letters;
+  }
