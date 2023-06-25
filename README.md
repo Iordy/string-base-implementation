@@ -7,14 +7,16 @@ This project is a basic implementation of a string class in C++, with a focus on
 - Basic string operations such as assignment and length retrieval
 - Overloaded stream insertion and extraction operators for easy I/O
 - Custom namespace to avoid naming conflicts
-- All the basic methods, constructors, iterators and other stuff
-- ```cpp
+- All the basic constructors, iterators and other stuff
+ ```cpp
    string();
    string(char letters[]);
    string(const string &source);
    string(char* begin, char* end);
    string(long long size);
    ```
+- String class methods such as ```assign```, ```at```, ```replace``` and others
+- Other ideas and observations are welcomed
 
 ## Usage
 
