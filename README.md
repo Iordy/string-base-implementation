@@ -16,7 +16,7 @@ This project is a basic implementation of a string class in C++, with a focus on
  string(long long size);
    ```
 - String class methods such as ```assign```, ```at```, ```replace``` and others
-  ```cpp
+ ```cpp
  char at(int index);
  char back();
  char front();
@@ -29,6 +29,7 @@ This project is a basic implementation of a string class in C++, with a focus on
  void insert(int index, const string &source);
  void pop_back();
  ```
+
 - Operator overloads
 ```cpp
  string& operator = (const string &source);
