@@ -17,12 +17,14 @@ class string
    string(char letters[]);
    string(const string &source);
    string(char* begin, char* end);
+   string(long long size);
    string& operator = (const string &source);
    ~string();
 
   string operator +(const string &source);
   bool operator ==(const string &source);
   bool operator !=(const string &source);
+  char operator [](int index);
 
   string& operator +=(const string &source);
 
@@ -34,6 +36,20 @@ class string
 
   char* begin(){return this->string_letters;}
   char* end(){return this->string_letters + this->string_length;}
+
+
+  char at(int index);
+  char back();
+  char front();
+  bool empty();
+  void erase(int index = 0);
+  void append(const string &source);
+  void push_back(const char c);
+  string& assign(const string &source);
+  void replace(int index, const string &source);
+  void insert(int index, const string &source);
+  void pop_back();
+
 
 
 

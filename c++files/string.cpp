@@ -39,6 +39,12 @@ using namespace custom_string;
         }
    }
 
+   string::string(long long size)
+   {
+          this-> string_length = size;
+          this-> string_letters = new char[size];
+   }
+
      
 
    string& string::operator = (const string &source)
@@ -91,6 +97,91 @@ using namespace custom_string;
         strcat(this->string_letters, source.string_letters);
         return *this;
    }
+
+   char string::operator [](int index)
+   {
+        return this->string_letters[index];
+   }
+
+   char string::at(int index)
+   {
+          return this->string_letters[index];
+   } 
+
+   char string::back()
+   {
+          return this->string_letters[this->string_length - 1];
+   }   
+
+   char string::front()
+   {
+          return this->string_letters[0];
+   }
+
+   bool string::empty()
+   {
+          if(this->string_length == 0)
+          return true;
+          return false;
+   }
+
+   void string::erase(int index)
+   {
+          for(int i = 0; i < this-> string_length; i++)
+          {
+                 if(i == index)
+                 {
+                      for(int j = i; j < this->string_length; j++)
+                      {
+                           this->string_letters[j] = this->string_letters[j + 1];
+                      }
+                 }
+          }
+   }
+
+   void string::append(const string& source)
+   {
+          strcat(this-> string_letters, source.string_letters);
+   }
+
+
+   void string::push_back(const char c)
+   {
+          char temp[1];
+          temp[0] = c;
+          strncat(this->string_letters, temp, 1);
+          this->string_length++;
+         
+   }
+
+   string& string::assign(const string& source)
+   {
+          return string::operator=(source);
+   }
+
+
+   void string::pop_back()
+   {
+          strncpy(this-> string_letters, this->string_letters, this->string_length - 1);
+   }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

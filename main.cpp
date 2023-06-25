@@ -10,7 +10,6 @@ using namespace custom_string;
 int main()
 {
     
-
     custom_string::string test("andrei");
 
     cin>>test;
@@ -20,9 +19,6 @@ int main()
     cout<<test2<<endl;
 
     cout<<endl<<test2.length()<<endl;
-
-
-    
 
     return 0;
 }
