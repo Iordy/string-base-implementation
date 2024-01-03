@@ -49,12 +49,7 @@ class string
   void replace(int index, const string &source);
   void insert(int index, const string &source);
   void pop_back();
-
-
-
-
-
-
+  
 };
 
 }
